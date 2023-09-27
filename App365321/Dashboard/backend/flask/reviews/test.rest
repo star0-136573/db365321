@@ -1,0 +1,20 @@
+GET http://127.0.0.1:5000/test2
+Authorization: Basic YWFhOmJiYg==
+###
+GET http://127.0.0.1:5000/test?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidG9tIiwiZXhwIjoxNjkzNzcwNjQ2fQ.FtxxSmYklY_5UVvnvw9JuxHkJ8WUD-ri_W2_tSReH44
+
+###
+http://127.0.0.1:5000/test
+Authorization: Jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidG9tIiwiZXhwIjoxNjkzOTQyMTg4fQ.Q03kWhWBD8W4vHGRbUN3jIss0CPtJfenxU1P9VjqmZc
+###
+GET http://127.0.0.1:5000/login?username=tom&&password=abc
+
+###
+
+POST 
+Content-Type: application/json
+{
+
+}
+
+### 

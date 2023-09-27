@@ -1,0 +1,215 @@
+<head>
+   <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+input {
+  caret-color: rgb(68, 122, 166);
+}
+
+body {
+  margin: 0;
+
+  background: #e6ecf0;
+  position:relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: hidden;
+  font-family: poppins;
+}
+
+.formm{
+  position: relative;
+  width: 300px;
+  height:420px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+.container {
+  position: relative;
+  width: 500px;
+  height: 700px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+
+
+
+.inputs {
+  text-align: left;
+  margin-top: 30px;
+}
+
+label, input, button,select {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 13px;
+  color:rgb(106, 84, 91);
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+input::placeholder {
+  color: gray;
+}
+select::placeholder {
+  color: rgb(149, 143, 143);
+}
+
+input {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+select {
+  background: #ecf0f3;
+  color:rgb(70, 130, 178);
+  text-align: center;
+  font-weight:bold;
+  text-decoration: underline;
+  appearance: none;
+  padding: 12px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 24px;
+  /* border-radius: 5px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white; */
+}
+
+button {
+  color: white;
+  background: #6697b5;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+}
+
+button:hover {
+  box-shadow: none;
+}
+
+a {
+  position: absolute;
+  font-size: 8px;
+  bottom: 4px;
+  right: 4px;
+  text-decoration: none;
+  color: black;
+  background: yellow;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.middle{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+   </style>
+
+</head>
+
+
+<body>
+
+
+    <main>
+        
+     <br>
+     <table>
+         <tr>
+             <td>
+                 
+                 
+                 <div class="formm">
+                     <div class="brand-logo"></div>
+                     <form class="login-form" action="/addUser" method="POST">
+                  <label for="roles">ROLE</label>
+                  <select name="role" id="role">
+                 <option value="manager">MANAGER</option>
+                 <option value="analyst">ANALYST</option>
+                </select>
+                <div class="form-control">
+                    <label for="username">username</label>
+                    <input type="text" name="username" id="username" >
+                </div>
+                <div class="form-control">
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <!-- <input type="hidden" "> -->
+                
+                <br/>
+                <br>
+                <button class="btn" type="submit">Add User</button>
+              
+                <h4 style="color:rgb(49, 231, 231);text-align: center;"><%= message %></h4>
+            </form>
+        </div>
+    </td>
+    <td class="middle">
+      
+    </td> 
+    <td>
+
+        
+<br>
+<div class="container">
+    
+    
+    <table style="width:100%" class="user">
+        <tr>
+            <td><h2 style="color:rgba(113, 107, 104, 0.781); text-decoration: underline;">USERNAME</h2></td>
+            <td><h2 style="color:rgba(103, 95, 93, 0.765);text-decoration: underline;">ROLE</h2></td>
+        </tr>
+        
+        <% for (let user of users) { %>
+            <tr style="color:rgb(70, 130, 178); font-size: 11px;">
+                <td >
+                    <h1> <%= user.name%></h1>
+                    
+                </td>
+                <td >
+                    <h1> <%= user.role%></h1>
+                    
+                </td>
+            </tr>
+            <% }; %>
+        </ul>
+        
+    </div>
+</td>
+    
+</tr>
+</table>
+
+
+</main>
