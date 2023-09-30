@@ -1,5 +1,5 @@
 ### Dashboard App
-[Demo][https://link-url-here.org](https://youtu.be/xF5Q0N9nltg)
+![Demo][https://link-url-here.org](https://youtu.be/xF5Q0N9nltg)
 ## features:
  > - Full stack MERN project .
  > - Authentication with hashed password .
